@@ -28,8 +28,18 @@ export default function List() {
         <div>
             <h1>Movies</h1>
             {resData ? (
-                <pre>{JSON.stringify(resData, null, 2)}</pre>
+                <>{resData.results.map((mov) =>
+                    <>
+                        <img src={mov.primaryImage?.url} />
+                        <div className='mov-card'>
+                            {mov.titleText.text}
+                        </div>
+                    </>
+
+                )}
+                </>
             ) : (<p>Loading...</p>)}
+
         </div>
     )
 }
