@@ -5,7 +5,7 @@ export default function List() {
 
     const [resData, setResData] = useState(null);
 
-    const url = "http://hi.com";
+    const url = "home";
 
     useEffect(() => {
 
