@@ -16,11 +16,11 @@ namespace MovieBuffs.Controllers
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("https://moviesdatabase.p.rapidapi.com/titles"),
+                    RequestUri = new Uri("https://cinema-api.p.rapidapi.com/get_ids/avenger/movies"),
                     Headers =
                 {
                     { "X-RapidAPI-Key", "9c7dacc693mshbb7189a877b0d35p171c55jsn70ae3d852c8e" },
-                    { "X-RapidAPI-Host", "moviesdatabase.p.rapidapi.com" },
+                    { "X-RapidAPI-Host", "cinema-api.p.rapidapi.com" },
                 },
                 };
                 using (var response = await client.SendAsync(request))
