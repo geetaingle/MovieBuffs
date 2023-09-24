@@ -28,13 +28,21 @@ export default function List() {
         <div>
             <h1>Movies</h1>
             {resData ? (
-                <>{resData.results.map((mov) =>
-                    <>
-                        <img src={mov.primaryImage?.url} />
-                        <div className='mov-card'>
-                            {mov.titleText.text}
+                <>{resData.data.map((mov) =>
+                    <div key={mov.ID} className='grid'>
+                        <div className='mov-card col'>
+                            <div className=''>
+                                <img src={mov.Image} />
+                            </div>
+                            <div>
+                                <span className='title' >
+                                    {mov["Movie Title"]}
+                                </span>
+                                <span className='desc'>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</span>
+
+                            </div>
                         </div>
-                    </>
+                    </div>
 
                 )}
                 </>
